@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tap Tap Mining</title>
+    <style>
+        body {
+            font-family: adorsholipi, ;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .container h1 {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        .container h2 {
+            font-size: 20px;
+            margin: 20px 0;
+        }
+        .container button {
+            padding: 15px 30px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: #fff;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .container .reset-button {
+            background-color: #f44336;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1> তাসবি তিলাওয়াত <br> تسبي تلاوات </h1>
+	<label for="আমল">আমল</label>
+        <select id="আমল" name="আমল" required>
+            <option value="" disabled selected>বেছে নিন</option>
+            <option value="আল্লাহু আকবার">আল্লাহু আকবার-الله أكبر</option>
+            <option value="লা ইলাহা ইলাল্লাহ">লা ইলাহা ইলাল্লাহ-لا إله إلا الله</option>
+            <option value="সুবাহানাল্লাহ">সুবাহানাল্লাহ-سُبْحَانَ ٱللَّٰهِ</option>
+            <option value="আলহামদুলিল্লাহ">আলহামদুলিল্লাহ-ٱلْحَمْدُ لِلَّٰهِ</option>
+        </select>
+
+	
+	
+    <h2>পাঠ করেছেন_ <span id="points">0</span> _বার</h2>
+    <button id="mineButton">পাঠ করুন</button>
+    <button class="reset-button" id="resetButton">পুনারাম্ভ</button>
+</div>
+
+<script>
+    let points = 0;
+
+    document.getElementById('mineButton').addEventListener('click', function() {
+        points++;
+        document.getElementById('points').innerText = points;
+    });
+
+    document.getElementById('resetButton').addEventListener('click', function() {
+        points = 0;
+        document.getElementById('points').innerText = points;
+    });
+</script>
+
+</body>
+</html>
